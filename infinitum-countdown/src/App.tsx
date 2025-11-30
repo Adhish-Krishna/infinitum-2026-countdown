@@ -1,35 +1,48 @@
-import React from 'react';
-import infinitumLogo from './assets/image.png';
+import infinitumLogo from './assets/infinitumLogo.png';
 import aibot from './assets/aibot.png';
 import years75 from './assets/75yearsLogo.png';
 import csea from './assets/CSEA_LOGO.png';
 import psg from './assets/PSG_LOGO.png';
 // import LightRays from './components/LightRays';
 import CountdownTimer from './components/CountdownTimer';
+import FloatingLines from './components/FloatingLines';
 
 const App: React.FC = () => {
   return (
     <div
-      className="w-full min-h-screen relative bg-[radial-gradient(ellipse_800px_500px_at_50%_80%,#5f0281ff,#000000)] overflow-hidden"
+      className="w-full min-h-screen relative bg-black overflow-hidden"
     >
       {/* Light rays can be enabled by uncommenting the component below */}
-      {/*
-      <div className="absolute inset-0">
-        <LightRays
-          raysOrigin="top-center"
-          raysColor="#6e5c73ff"
-          raysSpeed={1.5}
-          lightSpread={0.8}
-          rayLength={1.2}
-          followMouse
-          mouseInfluence={0.1}
-          noiseAmount={0.1}
-          distortion={0.05}
-          className="custom-rays"
+      <div className='absolute inset-0 z-0 pointer-events-none mix-blend-screen opacity-95'>
+        <FloatingLines 
+          linesGradient={["#a353e0", "#23013d", "#c72071"]}
+          enabledWaves={['top', 'middle' ,'bottom']}
+          lineCount={[5, 5, 5]}
+          lineDistance={[8, 6, 4]}
+          bendRadius={5.0}
+          bendStrength={-0.5}
+          interactive={true}
+          parallax={true}
         />
       </div>
-      */}
-
+      {/* <div className="absolute inset-0 z-0 pointer-events-none">
+        <LightRays
+          raysOrigin="top-center"
+          raysColor="#5F0281"
+          raysSpeed={0.5}
+          lightSpread={0.85}
+          rayLength={1.5}
+          pulsating={false}
+          fadeDistance={1.2}
+          saturation={1.15}
+          followMouse={true}
+          mouseInfluence={0.06}
+          noiseAmount={0.02}
+          distortion={0.02}
+          className="opacity-80 mix-blend-screen"
+        />
+      </div> */}
+     
       {/* Top logos */}
       <div className="absolute inset-x-0 top-2 sm:top-6 flex flex-row sm:flex-row items-center sm:justify-between px-3 z-20">
         <div className="flex items-center gap-3 justify-start sm:justify-start w-full sm:w-auto">
