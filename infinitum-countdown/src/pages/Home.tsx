@@ -1,7 +1,7 @@
 import React from 'react';
 import infinitumLogo from '../assets/infinitumLogo.png';
 import aibot from '../assets/aibot.png';
-import years75 from '../assets/75yearsLogo.png';
+import years75 from '../assets/75yearsLogoWhite.png';
 import csea from '../assets/CSEA_LOGO.png';
 import psg from '../assets/PSG_LOGO.png';
 import CountdownTimer from '../components/CountdownTimer';
@@ -28,16 +28,16 @@ const Home: React.FC = ()=>{
       
         {/* Top logos */}
         <div className="absolute inset-x-0 top-2 sm:top-6 flex flex-row sm:flex-row items-center sm:justify-between px-3 z-20">
-          <div className="flex items-center gap-3 justify-start sm:justify-start w-full sm:w-auto">
-            <img src={psg} alt="PSG Logo" className="h-10 sm:h-20 w-auto" />
+          <div className="flex items-center gap-3 justify-start sm:justify-start w-full sm:w-auto pl-20">
+            <img src={psg} alt="PSG Logo" className="h-15 sm:h-30 w-auto" />
             <img src={years75} alt="75 Years Logo" className="h-10 sm:h-20 w-auto" />
           </div>
-          <div className="flex items-center justify-end sm:justify-end w-full sm:w-auto mt-2 sm:mt-0">
+          <div className="flex items-center justify-end sm:justify-end w-full sm:w-auto sm:mt-0 pr-20">
             <img src={csea} alt="CSEA Logo" className="h-10 sm:h-20 w-auto" />
           </div>
         </div>
 
-        <main className="relative z-10 px-4 p-5 sm:p-3 flex flex-col items-center">
+        <main className="relative z-10 px-4 p-10 sm:p-3 flex flex-col items-center">
           <p className="text-base sm:text-[20px] font-bold text-white text-center mt-14 sm:mt-6" style={{ fontFamily: 'var(--font-family-albert)' }}>
             PSG COLLEGE OF TECHNOLOGY
           </p>
