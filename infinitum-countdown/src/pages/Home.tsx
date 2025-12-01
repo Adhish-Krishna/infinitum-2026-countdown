@@ -4,12 +4,25 @@ import aibot from '../assets/aibot.png';
 import years75 from '../assets/75yearsLogoWhite.png';
 import csea from '../assets/CSEA_LOGO.png';
 import psg from '../assets/PSG_LOGO.png';
+import Infinitum2025Text from '../assets/Infinitum2025Text.png';
 import CountdownTimer from '../components/CountdownTimer';
 import FloatingLines from '../components/FloatingLines';
+import DomeGallery from '@/components/DomeGallery';
+import { LightRays } from '@/components/ui/light-rays';
 
 const Home: React.FC = ()=>{
+
+    const infinitum2025Images : string[] = [
+      "https://res.cloudinary.com/duj1qgmah/image/upload/v1764603651/IMG_2451_vob41d.jpg",
+      "https://res.cloudinary.com/duj1qgmah/image/upload/v1764603650/IMG_5022_ctpmgy.jpg",
+      "https://res.cloudinary.com/duj1qgmah/image/upload/v1764603650/DSC_2395_1_x8jyzm.jpg",
+      "https://res.cloudinary.com/duj1qgmah/image/upload/v1764603648/IMG_2567_oy5v7l.jpg",
+      "https://res.cloudinary.com/duj1qgmah/image/upload/v1764603647/IMG_2140_ehc7ku.jpg",
+    ]
+
     return (
     <>
+      {/* Hero Section */}
       <div
         className="w-full relative bg-black overflow-hidden"
       >
@@ -79,60 +92,92 @@ const Home: React.FC = ()=>{
           <div className="w-full flex justify-center mt-6 sm:mt-8 relative z-20">
             <CountdownTimer />
           </div>
+        </main>
+      </div>
 
+      {/* Section Separator */}
+      <div className="w-full flex justify-center bg-black">
+        <div className="w-3/4 max-w-4xl h-px bg-linear-to-r from-transparent via-[#FF1170]/50 to-transparent" />
+      </div>
 
+      {/* Event Gallery */}
+      <div className='relative w-full min-h-[500px] sm:min-h-[700px] flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-10 bg-black py-10 sm:py-0 px-4 sm:px-0 overflow-hidden'>
+        {/* Light Rays Background */}
+        <LightRays 
+          count={10}
+          color="rgba(67, 2, 105, 0.5)"
+          blur={40}
+          speed={12}
+          length="100%"
+          className="z-0"
+        />
+        
+        <img src={Infinitum2025Text} className='relative z-10 h-40 sm:h-120 sm:mb-17 w-auto' alt="Infinitum 2025" />
+        <div className="relative z-10 w-full sm:w-[800px] h-[400px] sm:h-[600px]">
+          <DomeGallery 
+            images={infinitum2025Images}
+            grayscale={false}
+            segments={25}
+            fit={0.6}
+            minRadius={400}
+          />
+        </div>
+      </div>
 
-          {/* Footer */}
-          <footer className="w-full mt-16 sm:mt-20 pb-8 relative z-20">
-            <div className="max-w-4xl mx-auto px-4">
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12">
+      {/* Section Separator */}
+      <div className="w-full flex justify-center bg-black">
+        <div className="w-3/4 max-w-4xl h-px bg-linear-to-r from-transparent via-[#FF1170]/50 to-transparent" />
+      </div>
+
+      {/* Footer */}
+      <footer className="w-full pt-8 pb-8 bg-black relative z-20">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12">
                 {/* Contact Numbers */}
-                <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8">
-                  <div className="flex flex-col items-center">
+              <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-8">
+                <div className="flex flex-col items-center">
                     <span className="text-white text-base font-semibold mb-0.5" style={{ fontFamily: 'var(--font-family-albert)' }}>
                       ARULKUMARA B R
-                    </span>
-                    <span className="text-white text-xs opacity-75 mb-1" style={{ fontFamily: 'var(--font-family-albert)' }}>
+                  </span>
+                  <span className="text-white text-xs opacity-75 mb-1" style={{ fontFamily: 'var(--font-family-albert)' }}>
                       Secretary, CSEA
-                    </span>
-                    <a href="tel:+1234567890" className="text-white hover:text-[#FF1170] transition-colors" style={{ fontFamily: 'var(--font-family-albert)' }}>
+                  </span>
+                  <a href="tel:+1234567890" className="text-white hover:text-[#FF1170] transition-colors" style={{ fontFamily: 'var(--font-family-albert)' }}>
                       📞 +91 86102 02823
-                    </a>
-                  </div>
-                  <div className="flex flex-col items-center">
-                    <span className="text-white text-base font-semibold mb-0.5" style={{ fontFamily: 'var(--font-family-albert)' }}>
-                      SANJAY J
-                    </span>
-                    <span className="text-white text-xs opacity-75 mb-1" style={{ fontFamily: 'var(--font-family-albert)' }}>
-                      Joint Secretary, CSEA
-                    </span>
-                    <a href="tel:+1234567891" className="text-white hover:text-[#FF1170] transition-colors" style={{ fontFamily: 'var(--font-family-albert)' }}>
-                      📞 +91 97897 10033
-                    </a>
-                  </div>
-                  <div className="flex flex-col items-center">
-                    <span className="text-white text-base font-semibold mb-0.5" style={{ fontFamily: 'var(--font-family-albert)' }}>
-                      NAREN SIDDHARTH M
-                    </span>
-                    <span className="text-white text-xs opacity-75 mb-1" style={{ fontFamily: 'var(--font-family-albert)' }}>
-                      Head, Sponsorship
-                    </span>
-                    <a href="tel:+1234567892" className="text-white hover:text-[#FF1170] transition-colors" style={{ fontFamily: 'var(--font-family-albert)' }}>
-                      📞 +91 99409 79069
-                    </a>
-                  </div>
+                  </a>
                 </div>
-              </div>
-              {/* Email */}
-              <div className="flex justify-center mt-4">
-                <a href="mailto:infinitum@psgtech.edu" className="text-white hover:text-[#FF1170] transition-colors" style={{ fontFamily: 'var(--font-family-albert)' }}>
-                  ✉️ csea.cse@psgtech.ac.in
+                <div className="flex flex-col items-center">
+                  <span className="text-white text-base font-semibold mb-0.5" style={{ fontFamily: 'var(--font-family-albert)' }}>
+                      SANJAY J
+                  </span>
+                  <span className="text-white text-xs opacity-75 mb-1" style={{ fontFamily: 'var(--font-family-albert)' }}>
+                      Joint Secretary, CSEA
+                  </span>
+                  <a href="tel:+1234567891" className="text-white hover:text-[#FF1170] transition-colors" style={{ fontFamily: 'var(--font-family-albert)' }}>
+                      📞 +91 97897 10033
+                  </a>
+                </div>
+                <div className="flex flex-col items-center">
+                <span className="text-white text-base font-semibold mb-0.5" style={{ fontFamily: 'var(--font-family-albert)' }}>
+                      NAREN SIDDHARTH M
+                </span>
+                <span className="text-white text-xs opacity-75 mb-1" style={{ fontFamily: 'var(--font-family-albert)' }}>
+                      Head, Sponsorship
+                </span>
+                <a href="tel:+1234567892" className="text-white hover:text-[#FF1170] transition-colors" style={{ fontFamily: 'var(--font-family-albert)' }}>
+                      📞 +91 99409 79069
                 </a>
               </div>
             </div>
-          </footer>
-        </main>
-      </div>
+          </div>
+          {/* Email */}
+          <div className="flex justify-center mt-4">
+            <a href="mailto:infinitum@psgtech.edu" className="text-white hover:text-[#FF1170] transition-colors" style={{ fontFamily: 'var(--font-family-albert)' }}>
+                  ✉️ csea.cse@psgtech.ac.in
+            </a>
+          </div>
+        </div>
+      </footer>         
     </>
   );
 }
