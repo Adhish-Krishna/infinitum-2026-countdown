@@ -32,4 +32,4 @@ jobs:
           context: .
           file: ./infinitum-countdown/Dockerfile
           push: true
-          tags: ghcr.io/${{ github.repository_owner }}/infinitum-countdown:latest
+          tags: ghcr.io/darshan-v-g/infinitum-countdown:latest
