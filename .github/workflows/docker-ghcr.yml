@@ -29,7 +29,9 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: .
+          context: ./infinitum-countdown
           file: ./infinitum-countdown/Dockerfile
           push: true
-          tags: ghcr.io/darshan-v-g/infinitum-countdown:latest
+          tags: |
+            ghcr.io/darshan-v-g/infinitum-countdown:latest
+            ghcr.io/darshan-v-g/infinitum-countdown:${{ github.sha }}
